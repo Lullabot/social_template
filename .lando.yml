@@ -1,0 +1,48 @@
+name: social
+recipe: drupal8
+env_file:
+  - /app/dist/lando/.lando.env
+  - .env
+services:
+  appserver:
+    webroot: html
+    type: php
+    build_as_root:
+      - bash /app/scripts/lando/lando-build-as-root.sh
+    run_as_root:
+      - bash /app/scripts/lando/lando-run-as-root.sh
+    run:
+      - bash /app/scripts/lando/lando-run.sh
+    overrides:
+      image: devwithlando/php:7.3-apache
+      environment:
+        PHP_IDE_CONFIG: "serverName=appserver"
+        PHP_MEMORY_LIMIT: 1G
+        ENVIRONMENT: local
+        DRUSH_OPTIONS_URI: social.lndo.site
+        COMPOSE_HTTP_TIMEOUT: 200
+  database:
+    type: mariadb
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
+    portforward: 1026
+proxy:
+  appserver:
+    - social.lndo.site
+  mailhog:
+    - social.mail.lndo.site
+events:
+  post-start:
+    - appserver: 'echo "Access your site at http://social.lndo.site using admin/password."'
+    - appserver: cp /app/dist/lando/settings.lando.php /app/html/sites/default/settings.local.php
+tooling:
+  drush:
+    service: appserver
+    description: "Run a drush command."
+    cmd: "/app/vendor/bin/drush"
+  composer:
+    service: appserver
+    description: "Run a composer command."
+    cmd: "/usr/local/bin/composer"
