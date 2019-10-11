@@ -1,0 +1,30 @@
+uuid: e1e1b305-bd74-47b8-8eee-6e4df4a67bd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.newest_groups
+  module:
+    - system
+    - views
+  theme:
+    - socialblue
+id: socialblue_views_block__newest_groups_block_newest_groups
+theme: socialblue
+region: complementary_bottom
+weight: 4
+provider: null
+plugin: 'views_block:newest_groups-block_newest_groups'
+settings:
+  id: 'views_block:newest_groups-block_newest_groups'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/stream\r\n/explore"
+    negate: false
+    context_mapping: {  }

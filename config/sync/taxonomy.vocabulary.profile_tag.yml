@@ -1,0 +1,10 @@
+uuid: 5478aaf6-db19-47d0-9b1d-a5e8214a1317
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: AeOmDRryaH6IVdLehAFSAmYxOuorndgApcHCEapsDjE
+name: 'Profile tag'
+vid: profile_tag
+description: 'CM can tag a user, giving options on filtering / searching users.'
+weight: 0

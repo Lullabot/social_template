@@ -36,7 +36,6 @@ proxy:
 events:
   post-start:
     - appserver: 'echo "Access your site at http://social.lndo.site using admin/password."'
-    - appserver: cp /app/dist/lando/settings.lando.php /app/html/sites/default/settings.local.php
 tooling:
   drush:
     service: appserver

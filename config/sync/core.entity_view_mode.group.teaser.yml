@@ -1,0 +1,12 @@
+uuid: bd2bb8c8-d0e9-43df-bea5-d11e9b096780
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+_core:
+  default_config_hash: YXlikPyGTT4Ozc42C7qAGkMEreAc7X4yfCg6B16lH2I
+id: group.teaser
+label: Teaser
+targetEntityType: group
+cache: true

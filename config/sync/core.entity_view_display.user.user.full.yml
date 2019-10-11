@@ -1,0 +1,24 @@
+uuid: a1879077-528d-48ee-8872-0071d8780f4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.full
+  module:
+    - user
+_core:
+  default_config_hash: wGXMaSUqoCmrTVG9rHJ1kM9sORQ2mhVaqxgK77hzE2o
+id: user.user.full
+targetEntityType: user
+bundle: user
+mode: full
+content: {  }
+hidden:
+  groups: true
+  groups_type_closed_group: true
+  groups_type_open_group: true
+  groups_type_public_group: true
+  member_for: true
+  profile_main: true
+  profile_profile: true
+  profile_profiles: true

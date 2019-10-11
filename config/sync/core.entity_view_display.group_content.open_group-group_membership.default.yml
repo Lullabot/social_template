@@ -1,0 +1,24 @@
+uuid: f49f703f-37dc-43f1-84c0-bdd6f9ac6ce0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.group_content.open_group-group_membership.group_roles
+    - group.content_type.open_group-group_membership
+_core:
+  default_config_hash: jGyQJ5yQsfIk_ZYccKOl7qrRKklzXoKTMbnGrRvH0mc
+id: group_content.open_group-group_membership.default
+targetEntityType: group_content
+bundle: open_group-group_membership
+mode: default
+content:
+  entity_id:
+    type: entity_reference_entity_id
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  group_roles: true
+  uid: true

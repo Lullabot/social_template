@@ -18,6 +18,9 @@
         "doctrine/lexer": "1.0.2",
         "drush/drush": "^9.7"
     },
+    "require-dev": {
+        "drupal/devel_entity_updates": "^1.0"
+    },
     "repositories": [
         {
             "type": "composer",
