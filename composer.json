@@ -69,6 +69,11 @@
                 "type:drupal-drush"
             ]
         },
+        "patches": {
+            "goalgorilla/open_social": {
+                "Issue #3077682 Warning: Couldn't find constant CSS_CONTENT": "https://www.drupal.org/files/issues/2019-08-28/couldnt-find-constant-css-content-3077682-3.patch"
+            }
+        },
         "enable-patching": true
     }
 }
